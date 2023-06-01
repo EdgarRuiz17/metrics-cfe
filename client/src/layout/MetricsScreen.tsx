@@ -23,7 +23,7 @@ export const MetricsScreen = () => {
          setMetrics(metricsFound.data);
       };
       fetchMetrics();
-   }, [setMetrics]);
+   }, [setMetrics, createNew]);
 
    return (
       <Box sx={{ flexGrow: 1 }}>
@@ -73,7 +73,7 @@ export const MetricsScreen = () => {
                      Volver a lista
                   </Button>
                </Box>
-               <Layout />
+               <Layout setCreateNew={setCreateNew} createNew={createNew} />
             </Box>
          )}
       </Box>

@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Layout } from "./layout/Layout";
-
 import Error404 from "./layout/Error404";
 import MiniDrawer from "./components/Drawer";
 import { IdleScreen } from "./layout/IldeScreen";
@@ -26,7 +24,6 @@ const InitialRoutes = () => {
                <Route path="/" element={<MiniDrawer />}>
                   <Route path="" element={<IdleScreen />} />
                   <Route path="list" element={<MetricsScreen />} />
-                  <Route path="create" element={<Layout />} />
                </Route>
             </Routes>
          </Router>

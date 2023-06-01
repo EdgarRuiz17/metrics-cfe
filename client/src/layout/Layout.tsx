@@ -12,7 +12,7 @@ import AlertSnackBar from "../components/AlertSnackbar";
 
 const steps = ["RHX", "RY", "RHX-Y"];
 
-export const Layout = () => {
+export const Layout = ({ setCreateNew, createNew }) => {
    const [activeStep, setActiveStep] = useState(0);
    const [skipped, setSkipped] = useState(new Set<number>());
    const [messageSnackBar, setMessageSnackBar] = React.useState("");
@@ -111,6 +111,8 @@ export const Layout = () => {
          setMessageSnackBar("Medidas almacenadas correctamente");
          setSeveritySnackBar("success");
          setOpenSnackBar(true);
+         console.log({ createNew });
+         setCreateNew(false);
       } catch (error) {
          console.log(error);
          setMessageSnackBar("Hubo un problema, favor de volver a intentar");
