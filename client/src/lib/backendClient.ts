@@ -5,7 +5,7 @@ const baseURL = "http://localhost:5000";
 const METRICS = "/metrics";
 const ADD = "/add";
 
-export const createNewUser = async (metrics) => {
+export const createNewMetric = async (metrics) => {
    const payload = {
       metric_date: new Date(),
       metrics,

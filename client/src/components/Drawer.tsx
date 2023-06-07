@@ -118,7 +118,7 @@ export default function MiniDrawer() {
                   <MenuIcon />
                </IconButton>
                <Typography variant="h6" noWrap component="div">
-                  Sistema para la gestion de parrillas
+                  Registro de mantenimiento y formulación de reporte
                </Typography>
             </Toolbar>
          </AppBar>
