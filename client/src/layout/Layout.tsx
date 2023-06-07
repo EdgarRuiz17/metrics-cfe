@@ -7,7 +7,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import { useState } from "react";
 import React from "react";
-import { createNewUser } from "../lib/backendClient";
+import { createNewMetric } from "../lib/backendClient";
 import AlertSnackBar from "../components/AlertSnackbar";
 
 const steps = ["RHX", "RY", "RHX-Y"];
@@ -107,7 +107,7 @@ export const Layout = ({ setCreateNew, createNew }) => {
 
    const createNewMetrics = async () => {
       try {
-         await createNewUser(metrics);
+         await createNewMetric(metrics);
          setMessageSnackBar("Medidas almacenadas correctamente");
          setSeveritySnackBar("success");
          setOpenSnackBar(true);
